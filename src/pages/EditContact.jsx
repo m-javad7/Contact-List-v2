@@ -76,8 +76,8 @@ const EditContact = () => {
         <p className="text-red-600 text-sm">{error}</p>
       ) : (
         <form onSubmit={handleSubmit} className="bg-white shadow-md rounded p-12 mb-4">
-          <InputField label="Name:" type="text" name="name" value={name} onChange={handleChange} />
-          <InputField label="Phone Number:" type="tel" name="number" value={number} onChange={handleChange} />
+          <InputField label="Name" type="text" name="name" value={name} onChange={handleChange} />
+          <InputField label="Phone Number" type="tel" name="number" value={number} onChange={handleChange} />
 
           <div className="flex items-center justify-between">
             <button
