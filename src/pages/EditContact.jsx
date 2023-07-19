@@ -68,14 +68,14 @@ const EditContact = () => {
 
   return (
     <>
+        <div className="h-[100vh] flex flex-col items-center justify-center">
+
       {loading ? (
-        <div className="w-full flex flex-col items-center justify-center">
         <p className="font-bold text-3xl">Loading...</p>
-        </div>
       ) : error ? (
         <p className="text-red-600 text-sm">{error}</p>
       ) : (
-        <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <form onSubmit={handleSubmit} className="bg-white shadow-md rounded p-12 mb-4">
           <InputField label="Name:" type="text" name="name" value={name} onChange={handleChange} />
           <InputField label="Phone Number:" type="tel" name="number" value={number} onChange={handleChange} />
 
@@ -92,6 +92,8 @@ const EditContact = () => {
           </div>
         </form>
       )}
+        </div>
+
     </>
   );
 };
